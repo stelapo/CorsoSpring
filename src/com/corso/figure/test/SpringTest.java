@@ -11,7 +11,7 @@ import com.corso.figure.Figura;
 
 public class SpringTest {
 	public static void main(String[] args) {  
-	    Resource resource=new ClassPathResource("beans.xml");  
+	    Resource resource=new ClassPathResource("resources/beans.xml");
 	    BeanFactory factory=new XmlBeanFactory(resource);  
 	      
         Figura c =(Figura)factory.getBean("figura01");  

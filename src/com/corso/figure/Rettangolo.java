@@ -4,8 +4,10 @@ public class Rettangolo implements Figura {
 
 	private double base;
 	private double altezza;
+	
+	
 	@Override
-	public double area() {
+	public Double area() {
 		
 		return this.base*this.altezza;
 	}

@@ -1,5 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <module type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="Spring" name="Spring">
+      <configuration>
+        <fileset id="fileset" name="Beans" removed="false">
+          <file>file://$MODULE_DIR$/resources/beans.xml</file>
+        </fileset>
+      </configuration>
+    </facet>
+  </component>
   <component name="NewModuleRootManager" inherit-compiler-output="true">
     <exclude-output />
     <content url="file://$MODULE_DIR$">
@@ -7,7 +16,7 @@
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="spring-aop-5.3.9-javadoc" level="project" />
     <orderEntry type="library" exported="" name="spring-framework" level="project" />
+    <orderEntry type="library" exported="" name="aspectj-1.9" level="project" />
   </component>
 </module>

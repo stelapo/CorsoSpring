@@ -5,8 +5,8 @@ public class Cerchio implements Figura {
 
 	private double raggio;
 
-	@Override
-	public double area() {
+	
+	public Double area() {
 		return this.raggio*this.raggio*Math.PI;
 	}
 
@@ -27,6 +27,12 @@ public class Cerchio implements Figura {
 		super();
 		this.raggio = raggio;
 	}
+	
+	public Cerchio(String raggio) {
+		super();
+		this.raggio = Double.parseDouble(raggio);
+	}
+	
 
 	public Cerchio() {
 		super();
