@@ -1,14 +1,15 @@
 package com.corso.figure;
 
+import com.corso.aop.Loggable;
+
 public class Rettangolo implements Figura {
 
 	private double base;
 	private double altezza;
 	
-	
+	@Loggable//(level = Loggable.Level.DEBUG)
 	@Override
 	public Double area() {
-		
 		return this.base*this.altezza;
 	}
 	

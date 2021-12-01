@@ -2,6 +2,7 @@ package com.corso.aop;
 
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.ProceedingJoinPoint;
+import org.aspectj.lang.annotation.Around;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;
 import org.aspectj.lang.annotation.Pointcut;
@@ -11,6 +12,19 @@ public class EsempioAOPAnnotation {
 
     public void EsempioAOPAnnotation(){
         System.out.println("EsempioAOPAnnotation NEW" );
+    }
+
+    @Around("@annotation(loggable)")
+    public Object logExecutionTime(ProceedingJoinPoint joinPoint, Loggable loggable) throws Throwable {
+        long start = System.currentTimeMillis();
+
+
+        Object proceed = joinPoint.proceed();
+
+        long executionTime = System.currentTimeMillis() - start;
+
+        System.out.println(joinPoint.getSignature() + " executed in " + executionTime + "ms " + loggable.level());
+        return proceed;
     }
 
     @Pointcut("execution(* com.corso.figure.*.* (..))") //&& args(lato)

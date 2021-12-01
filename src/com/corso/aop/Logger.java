@@ -2,7 +2,7 @@ package com.corso.aop;
 
 import java.util.List;
 
-import com.corso.aop.Loggable.Level;
+//import com.corso.aop.Loggable.Level;
 
 public class Logger {
 	public void log( String message, Object[] arguments ) {
@@ -14,10 +14,10 @@ public class Logger {
 		
 	}
 
-	public void log(String message, Level level) {
+	/*public void log(String message, Level level) {
 		// TODO Auto-generated method stub
 		
-	}
+	}*/
 	
 	/*
 	public void error(String message) { log(message);}

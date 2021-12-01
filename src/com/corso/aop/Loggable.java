@@ -14,7 +14,5 @@ public @interface Loggable {
     }
 
     Level level() default Level.INFO;
-    
 
-    
 }
